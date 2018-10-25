@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/constraintLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <android.support.design.widget.AppBarLayout
+            android:id="@+id/appbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:elevation="0dp"
+                android:gravity="bottom"
+                android:minHeight="168dp"
+                app:layout_scrollFlags="scroll|enterAlways"
+                app:title="MENIERE'S"
+                app:titleMarginBottom="16dp"
+                app:titleMarginStart="30dp"
+                app:titleTextColor="@color/primaryTextColor"></android.support.v7.widget.Toolbar>
+
+            <android.support.design.widget.TabLayout
+                android:id="@+id/tabLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/primaryLightColor"
+                android:elevation="12dp"
+                app:layout_scrollFlags="scroll|enterAlways"
+                app:tabMode="fixed"
+                app:tabTextColor="@color/primaryTextColor">
+
+                <android.support.design.widget.TabItem
+                    android:id="@+id/durationTab"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Duration" />
+
+                <android.support.design.widget.TabItem
+                    android:id="@+id/levelTab"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Level" />
+
+                <android.support.design.widget.TabItem
+                    android:id="@+id/symptomsTab"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Symptoms" />
+            </android.support.design.widget.TabLayout>
+
+
+        </android.support.design.widget.AppBarLayout>
+
+        <FrameLayout
+            android:id="@+id/frameLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <android.support.design.widget.FloatingActionButton
+                android:id="@+id/floatingActionButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end|bottom"
+                android:layout_marginBottom="16dp"
+                android:layout_marginRight="16dp"
+                android:clickable="true"
+                android:onClick="makeNewLog"
+                android:src="@android:drawable/ic_input_add"
+                app:elevation="20dp"
+                app:fabSize="normal" />
+        </FrameLayout>
+
+    </LinearLayout>
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="30dp" />
+
+</android.support.constraint.ConstraintLayout>
